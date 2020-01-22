@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{00868E5D-E71C-4AEF-992C-F918B870DE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{505A51A2-C493-417E-93EB-CE519900477F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00868E5D-E71C-4AEF-992C-F918B870DE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00868E5D-E71C-4AEF-992C-F918B870DE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00868E5D-E71C-4AEF-992C-F918B870DE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00868E5D-E71C-4AEF-992C-F918B870DE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505A51A2-C493-417E-93EB-CE519900477F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505A51A2-C493-417E-93EB-CE519900477F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505A51A2-C493-417E-93EB-CE519900477F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505A51A2-C493-417E-93EB-CE519900477F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A94409F-9DC8-4C03-9147-366C9573F1CD}
+	EndGlobalSection
+EndGlobal
