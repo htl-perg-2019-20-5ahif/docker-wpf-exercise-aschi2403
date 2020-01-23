@@ -11,6 +11,7 @@ namespace API.Model
         [Key]
         public int BookingId { get; set; }
         public DateTime Time { get; set; }
+        public int CarId { get; set; }
         public Car Car { get; set; }
     }
 }

@@ -20,8 +20,8 @@ namespace WPF
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public ObservableCollection<Car> Cars { get; set; } = new ObservableCollection<Car>();
-        //private const string Url= "http://localhost:8080/api";
-        private const string Url = "http://localhost:5000/api";
+        private const string Url= "http://localhost:8080/api";
+        //private const string Url = "http://localhost:5000/api";
         public ObservableCollection<Car> AvailableCars { get; set; } = new ObservableCollection<Car>();
 
         private static readonly HttpClient httpClient = new HttpClient();

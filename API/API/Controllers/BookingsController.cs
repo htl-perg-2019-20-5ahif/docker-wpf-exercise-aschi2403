@@ -49,6 +49,9 @@ namespace API.Controllers
         {
             //booking.Time = DateTime.Today;
 
+            booking.CarId = booking.Car.CarId;
+            booking.Car = null;
+
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
