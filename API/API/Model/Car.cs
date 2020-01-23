@@ -6,6 +6,7 @@ namespace API.Model
 {
     public class Car
     {
+        [Key]
         [JsonPropertyName("carId")]
         public int CarId { get; set; }
         [JsonPropertyName("name")]

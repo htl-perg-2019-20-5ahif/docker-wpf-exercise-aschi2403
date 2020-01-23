@@ -20,7 +20,8 @@ namespace WPF
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public ObservableCollection<Car> Cars { get; set; } = new ObservableCollection<Car>();
-        private const string Url= "http://localhost:8080/api";
+        //private const string Url= "http://localhost:8080/api";
+        private const string Url = "http://localhost:5000/api";
         public ObservableCollection<Car> AvailableCars { get; set; } = new ObservableCollection<Car>();
 
         private static readonly HttpClient httpClient = new HttpClient();
@@ -113,8 +114,11 @@ namespace WPF
 
         private async Task BookCar()
         {
-            StringContent content = new StringContent(JsonSerializer.Serialize(SelectedDate), Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = await httpClient.PostAsync(Url + "/api/Bookings", content);
+            StringContent content = new StringContent(JsonSerializer.Serialize(new Booking { 
+                Time = SelectedDate,
+                Car = SelectedCar
+            }), Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = await httpClient.PostAsync(Url + "/Bookings", content);
             resp.EnsureSuccessStatusCode();
             FetchAvailableCars(SelectedDate);
             Close();

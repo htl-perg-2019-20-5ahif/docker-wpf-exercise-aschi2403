@@ -47,12 +47,12 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<Booking>> PostBooking(Booking booking)
         {
-            booking.Time = DateTime.Today;
+            //booking.Time = DateTime.Today;
 
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBooking", new { id = booking.BookingId }, booking);
+            return Ok(booking);
         }
 
         private bool BookingExists(int id)
