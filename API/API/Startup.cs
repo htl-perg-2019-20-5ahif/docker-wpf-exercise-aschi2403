@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Model;
@@ -41,6 +42,12 @@ namespace API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+
+            using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                scope.ServiceProvider.GetService<CarBookingContext>().Database.Migrate();
+                scope.ServiceProvider.GetService<CarBookingContext>().Database.ExecuteSqlRaw(File.ReadAllText("data.sql"));
             }
 
             app.UseHttpsRedirection();
